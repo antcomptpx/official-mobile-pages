@@ -1,2 +1,49 @@
 # official-mobile-pages
-HTML page archive and documentation
+
+本项目用于归档和发布多个独立的 HTML 页面。这些页面不针对任何特定域名或具体网站，仅作为通用移动端页面的存储与展示仓库。
+
+## 项目简介
+
+`official-mobile-pages` 是一个静态页面归档仓库，旨在整理和发布一批独立、轻量的 HTML 文件。所有页面均为移动端友好设计，可直接通过浏览器访问，无需后端支持。
+
+本项目不涉及任何商业推广、域名绑定或具体业务逻辑，仅提供页面本身的存档与浏览功能。
+
+## 目录结构
+
+```
+official-mobile-pages/
+├── README.md
+└── pages/
+    ├── page-example-1.html
+    ├── page-example-2.html
+    └── ...
+```
+
+- `README.md`：项目说明文件（即本文档）。
+- `pages/`：存放所有独立 HTML 页面的主目录，每个文件代表一个独立页面。
+
+## 页面归档说明
+
+- 所有页面均为纯 HTML 文件，可离线查看或部署至任意静态托管服务。
+- 页面样式与脚本均内嵌或引用自通用 CDN，不依赖特定服务器。
+- 文件名以 `page-` 开头，后接描述性名称，便于识别。
+- 页面内容不包含任何实际域名、链接或营销信息，仅作为示例或功能演示。
+
+## 使用方式
+
+1. 克隆本仓库：
+   ```bash
+   git clone https://github.com/your-username/official-mobile-pages.git
+   ```
+2. 直接在浏览器中打开 `pages/` 目录下的任意 HTML 文件即可查看效果。
+3. 也可将整个 `pages/` 目录部署至 GitHub Pages 或类似静态站点服务。
+
+## 维护说明
+
+- 本项目由维护者不定期更新，新增页面或优化现有内容。
+- 欢迎提交 Issue 或 Pull Request，但请注意：**不接受任何包含具体域名、商业推广或诱导点击的内容**。
+- 所有提交的页面应保持简洁、通用，符合移动端浏览习惯。
+
+## 许可
+
+本项目采用 MIT 许可证，详情请参见 [LICENSE](LICENSE) 文件。
