@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷速体育 · 产品介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f7f8fa;
+            line-height: 1.7;
+            color: #1e1e2a;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0c0f1c 0%, #1a1f2f 100%);
+            color: #e6e9f0;
+            padding: 4rem 2rem 3.2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, #f7f8fa);
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.6rem;
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #b0b9d0;
+            max-width: 560px;
+            margin: 0 auto 1.2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 0.4rem 1.4rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #bcc5dd;
+            margin-top: 0.2rem;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 1.8rem;
+            flex: 1;
+        }
+
+        section {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02), 0 1px 4px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2.2rem;
+            margin-top: -2rem;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 2.2rem;
+        }
+
+        section h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #12131c;
+            letter-spacing: 0.3px;
+            border-left: 4px solid #3b6ea5;
+            padding-left: 1rem;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #2c2e3b;
+        }
+
+        .highlight-list {
+            list-style: none;
+            margin: 1.2rem 0 0.8rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 1.6rem;
+        }
+
+        .highlight-list li {
+            background: #f4f6fc;
+            padding: 0.9rem 1.2rem;
+            border-radius: 12px;
+            font-weight: 500;
+            color: #1a1f2e;
+            border-left: 3px solid #3b6ea5;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .highlight-list li span {
+            font-weight: 400;
+            color: #4b4f62;
+            display: block;
+            margin-top: 0.2rem;
+            font-size: 0.9rem;
+        }
+
+        .use-case {
+            background: #f9faff;
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            margin: 1.6rem 0 1.2rem;
+            border: 1px solid #e7eaf1;
+        }
+
+        .use-case h3 {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+            color: #1f2338;
+        }
+
+        .use-case p {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-mini {
+            margin: 1.6rem 0 0.6rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e3e6ef;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+        }
+
+        .faq-mini summary {
+            font-weight: 600;
+            color: #1d2a3f;
+            padding: 0.4rem 0;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .faq-mini details[open] summary {
+            color: #2a4d75;
+        }
+
+        .faq-mini details p {
+            margin: 0.5rem 0 0.4rem 1.2rem;
+            color: #3e4253;
+            font-size: 0.95rem;
+        }
+
+        .link-note {
+            font-size: 0.95rem;
+            background: #f0f4fc;
+            padding: 1rem 1.4rem;
+            border-radius: 14px;
+            margin-top: 1.6rem;
+            color: #1a2336;
+            border: 1px solid #d8e0ed;
+        }
+
+        .link-note a {
+            color: #1f5090;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dotted #1f5090;
+            transition: border 0.2s;
+        }
+
+        .link-note a:hover {
+            border-bottom: 2px solid #1f5090;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 2.5rem 1rem 2rem;
+            font-size: 0.85rem;
+            color: #6b7186;
+            border-top: 1px solid #e3e6ef;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 620px) {
+            .hero {
+                padding: 3rem 1.2rem 2.4rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 2rem 1.2rem;
+                margin-top: -1.4rem;
+            }
+            .highlight-list {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>雷速体育</h1>
+        <div class="sub">信息、节奏与专注——不止于赛事追踪</div>
+        <div class="tagline">再次打开 · 熟悉的体验</div>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2>一段关于重访的叙述</h2>
+            <p>
+                有些工具你会想要留下来。不是因为它许诺了什么，而是因为它恰好在需要的时候，提供了清晰、低干扰的信息流。
+                对于关注体育动态的人来说，<strong>雷速体育</strong>就扮演着这样的角色。
+                它不喧哗，不弹窗轰炸，也不会在每次访问时要求你重新适应布局。界面保持一贯的沉稳，数据更新则安静、持续。
+            </p>
+            <p>
+                最初可能只是随手打开看看比分，后来发现赛程、阵容、历史交锋也整合得干净。于是，它渐渐成为手机浏览器里那个「不会删」的标签页。
+                这也是为什么，当你想再次关注某场联赛、某个球员状态，或者只是习惯性刷新一下动态，你会自然而然地想起它。
+            </p>
+
+            <h2 style="margin-top: 2.2rem;">亮点 · 长期使用中沉淀的感受</h2>
+            <ul class="highlight-list">
+                <li>
+                    赛程与实时
+                    <span>覆盖主流联赛、杯赛，数据更新节奏稳定，没有多余动效干扰</span>
+                </li>
+                <li>
+                    结构清晰
+                    <span>信息层级分明，从总览到细节可以顺畅切换，适合快速浏览</span>
+                </li>
+                <li>
+                    低重复感
+                    <span>页面设计偏功能向，不刻意制造新鲜感，反而适合每日使用</span>
+                </li>
+                <li>
+                    加载利落
+                    <span>即使在网络一般的情况下，核心内容也能较快呈现</span>
+                </li>
+            </ul>
+
+            <div class="use-case">
+                <h3>使用建议 · 从收藏到日常</h3>
+                <p>
+                    如果你习惯用手机浏览器阅读体育资讯，不妨把 <strong>雷速体育</strong> 添加到主屏幕或书签栏。
+                    不必每次搜索，也不必担心错过关键赛程。它适合在通勤、午休或晚间闲暇时打开，扫一眼滚动信息，再关掉。
+                </p>
+                <p>
+                    对于深度关注某一赛事（例如欧冠、英超、CBA）的用户，可以善用站内的筛选和排序功能，把焦点锁定在特定联赛或队伍上。
+                    这样每次进入看到的都是与你最相关的动态，减少无关信息的打扰。
+                </p>
+            </div>
+
+            <div class="faq-mini">
+                <details>
+                    <summary>为什么值得再次访问？</summary>
+                    <p>
+                        因为信息更新持续，且页面没有频繁改版带来的陌生感。你记住的操作路径，下次依然能用。
+                        对于一个信息型站点，这种「不变」反而是最可靠的体验。
+                    </p>
+                </details>
+                <details>
+                    <summary>适合什么样的人持续关注？</summary>
+                    <p>
+                        适合那些不想被推送通知打扰、但仍希望保持对体育赛事基本了解的人。
+                        也适合需要快速查阅赛程、比分、对阵信息的轻度或中度体育观众。
+                    </p>
+                </details>
+                <details>
+                    <summary>是否需要注册或登录？</summary>
+                    <p>
+                        浏览公开的赛程和比分信息通常不需要账号。部分个性化功能（如关注球队、收藏赛事）可能需要简单注册，
+                        但核心浏览体验对临时访客友好。
+                    </p>
+                </details>
+            </div>
+
+            <div class="link-note">
+                <p>
+                    若你尚未将它加入收藏，或想从新的设备访问，可以直接前往
+                    <a href="https://chinese-leisutiyu.com">雷速体育</a>。
+                    页面打开后，建议花几分钟熟悉一下赛程板块的筛选逻辑，很快就能找到自己的节奏。
+                </p>
+                <p style="margin-top: 0.6rem; font-size: 0.9rem; color: #3b4f6e;">
+                    （书签存放、持续关注，往往比临时搜索更节省时间——这是许多长期访问者共同的体会。）
+                </p>
+            </div>
+        </section>
+
+        <div class="footer-note">
+            <p>保持简洁 · 保持信息 · 自然关注</p>
+            <p style="margin-top: 0.5rem; letter-spacing: 0.5px;">雷速体育 · 产品介绍页</p>
+        </div>
+    </div>
+</body>
+</html>
